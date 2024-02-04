@@ -3,7 +3,10 @@ import { printMessage, printLine } from '../services/log.service.js';
 
 function printGoodbye() {
   printLine({ color: 'green' });
-  printMessage({ text: `Thank you for using File Manager, ${getUserName()}!`, colorText: 'green' });
+  printMessage({
+    text: `Thank you for using File Manager, ${getUserName()}, , goodbye!`,
+    colorText: 'green',
+  });
 }
 function printGreet() {
   printMessage({ text: `Welcome to the File Manager, ${getUserName()}!`, colorText: 'green' });
