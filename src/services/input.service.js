@@ -1,5 +1,5 @@
-import { COMMANDS, commandExit, commandLs, commandUp } from '../commands/index.js';
-import { parserInput } from '../helpers/parserInput.js';
+import { COMMANDS, commandCd, commandExit, commandLs, commandUp } from '../commands/index.js';
+import { isPathExist, parserInput } from '../helpers/index.js';
 import { printCurrentDir } from '../messages/index.js';
 import { printError } from './log.service.js';
 
@@ -21,6 +21,10 @@ const inputConsole = async (data) => {
 
     case COMMANDS.LS:
       await commandLs();
+      break;
+
+    case COMMANDS.CD:
+      (await isPathExist(firstArg)) && (await commandCd(firstArg));
       break;
 
     default:
