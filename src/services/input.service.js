@@ -5,6 +5,8 @@ import {
   commandCd,
   commandExit,
   commandLs,
+  commandRm,
+  commandRn,
   commandUp,
 } from '../commands/index.js';
 import { isPathExist, parserInput } from '../helpers/index.js';
@@ -41,6 +43,14 @@ const inputConsole = async (data) => {
 
     case COMMANDS.ADD:
       commandAdd(firstArg);
+      break;
+
+    case COMMANDS.RN:
+      (await isPathExist(firstArg)) && commandRn(firstArg, secondArg);
+      break;
+
+    case COMMANDS.RM:
+      (await isPathExist(firstArg)) && commandRm(firstArg);
       break;
 
     default:

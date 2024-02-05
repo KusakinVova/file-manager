@@ -6,4 +6,6 @@ export const COMMANDS = {
   CD: 'cd',
   CAT: 'cat',
   ADD: 'add',
+  RN: 'rn',
+  RM: 'rm',
 };
