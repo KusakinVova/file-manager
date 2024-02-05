@@ -1,6 +1,10 @@
 import { homedir } from 'os';
+import { chdir } from 'process';
+
 function getHomeDirectory() {
-  return homedir();
+  const homeDirectory = homedir();
+  chdir(homeDirectory);
+  return homeDirectory;
 }
 
 export { getHomeDirectory };

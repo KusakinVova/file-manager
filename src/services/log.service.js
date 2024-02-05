@@ -1,4 +1,4 @@
-function printMessage({ text, colorText, colorBg }) {
+export function printMessage({ text, colorText, colorBg }) {
   let textLine = '';
   const colors = {
     reset: '\x1b[0m',
@@ -34,7 +34,7 @@ function printMessage({ text, colorText, colorBg }) {
   console.log(textLine);
 }
 
-function printLine(params) {
+export function printLine(params) {
   const text = '------------------------------------------------------';
   let colorText = undefined;
   let colorBg = undefined;
@@ -44,4 +44,6 @@ function printLine(params) {
   printMessage({ text, colorText, colorBg });
 }
 
-export { printMessage, printLine };
+export function printError(errorMessage) {
+  printMessage({ text: errorMessage, colorText: 'red' });
+}
