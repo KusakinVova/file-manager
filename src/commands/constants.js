@@ -4,4 +4,6 @@ export const COMMANDS = {
   EXIT2: 'exit',
   LS: 'ls',
   CD: 'cd',
+  CAT: 'cat',
+  ADD: 'add',
 };
