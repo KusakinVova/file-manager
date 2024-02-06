@@ -5,6 +5,7 @@ import {
   commandCd,
   commandCp,
   commandExit,
+  commandHash,
   commandLs,
   commandOs,
   commandRm,
@@ -71,6 +72,10 @@ const inputConsole = async (data) => {
 
     case COMMANDS.OS:
       commandOs(firstArg);
+      break;
+
+    case COMMANDS.HASH:
+      (await isPathExist(firstArg)) && (await commandHash(firstArg));
       break;
 
     default:

@@ -10,3 +10,4 @@ export { commandRn } from './commandRn.js';
 export { commandRm } from './commandRm.js';
 export { commandCp } from './commandCp.js';
 export { commandOs } from './commandOs.js';
+export { commandHash } from './commandHash.js';
