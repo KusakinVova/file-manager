@@ -6,6 +6,7 @@ import {
   commandCp,
   commandExit,
   commandLs,
+  commandOs,
   commandRm,
   commandRn,
   commandUp,
@@ -66,6 +67,10 @@ const inputConsole = async (data) => {
         commandRm(firstArg);
         printMessage({ text: 'File has been Moved', colorText: 'green' });
       }
+      break;
+
+    case COMMANDS.OS:
+      commandOs(firstArg);
       break;
 
     default:

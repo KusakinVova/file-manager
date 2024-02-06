@@ -10,4 +10,5 @@ export const COMMANDS = {
   RM: 'rm',
   CP: 'cp',
   MV: 'mv',
+  OS: 'os',
 };
