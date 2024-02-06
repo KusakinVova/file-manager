@@ -5,6 +5,6 @@ export async function commandCd(path) {
   try {
     chdir(`${path}`);
   } catch (error) {
-    printError(`Operation failed! Message: ${error.message}`);
+    printError(`Operation failed! Message:\n ${error.message}`);
   }
 }

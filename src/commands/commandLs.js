@@ -18,5 +18,5 @@ export async function commandLs() {
         .sort((a, b) => (a.Type > b.Type ? 1 : -1)),
     )
     .then(console.table)
-    .catch((error) => printError(`Operation failed! Message: ${error.message}`));
+    .catch((error) => printError(`Operation failed! Message:\n ${error.message}`));
 }

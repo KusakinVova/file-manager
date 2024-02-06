@@ -6,7 +6,7 @@ export async function isPathExist(path) {
     await access(path);
     return true;
   } catch (error) {
-    printError(`Operation failed! Message: ${error.message}`);
+    printError(`Operation failed! Message:\n ${error.message}`);
     return false;
   }
 }

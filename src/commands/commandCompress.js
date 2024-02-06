@@ -11,6 +11,6 @@ export async function commandCompress(firstArg, secondArg) {
     readableStream.pipe(zip).pipe(writableStream);
     printMessage({ text: 'File has been Zip', colorText: 'green' });
   } catch (error) {
-    printError(`Operation failed! Message: \n${error.message}`);
+    printError(`Operation failed! Message:\n ${error.message}`);
   }
 }

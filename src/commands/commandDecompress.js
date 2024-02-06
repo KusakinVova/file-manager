@@ -11,6 +11,6 @@ export async function commandDecompress(firstArg, secondArg) {
     readableStream.pipe(unzip).pipe(writableStream);
     printMessage({ text: 'File has been Unzip', colorText: 'green' });
   } catch (error) {
-    printError(`Operation failed! Message: \n${error.message}`);
+    printError(`Operation failed! Message:\n ${error.message}`);
   }
 }
