@@ -8,3 +8,4 @@ export { commandCat } from './commandCat.js';
 export { commandAdd } from './commandAdd.js';
 export { commandRn } from './commandRn.js';
 export { commandRm } from './commandRm.js';
+export { commandCp } from './commandCp.js';

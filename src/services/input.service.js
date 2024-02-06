@@ -3,6 +3,7 @@ import {
   commandAdd,
   commandCat,
   commandCd,
+  commandCp,
   commandExit,
   commandLs,
   commandRm,
@@ -51,6 +52,12 @@ const inputConsole = async (data) => {
 
     case COMMANDS.RM:
       (await isPathExist(firstArg)) && commandRm(firstArg);
+      break;
+
+    case COMMANDS.CP:
+      (await isPathExist(firstArg)) &&
+        (await isPathExist(secondArg)) &&
+        (await commandCp(firstArg, secondArg));
       break;
 
     default:
