@@ -3,7 +3,9 @@ import {
   commandAdd,
   commandCat,
   commandCd,
+  commandCompress,
   commandCp,
+  commandDecompress,
   commandExit,
   commandHash,
   commandLs,
@@ -76,6 +78,14 @@ const inputConsole = async (data) => {
 
     case COMMANDS.HASH:
       (await isPathExist(firstArg)) && (await commandHash(firstArg));
+      break;
+
+    case COMMANDS.COMPRESS:
+      (await isPathExist(firstArg)) && commandCompress(firstArg, secondArg);
+      break;
+
+    case COMMANDS.DECOMPRESS:
+      (await isPathExist(firstArg)) && commandDecompress(firstArg, secondArg);
       break;
 
     default:

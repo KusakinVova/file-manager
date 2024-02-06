@@ -12,4 +12,6 @@ export const COMMANDS = {
   MV: 'mv',
   OS: 'os',
   HASH: 'hash',
+  COMPRESS: 'compress',
+  DECOMPRESS: 'decompress',
 };

@@ -11,3 +11,5 @@ export { commandRm } from './commandRm.js';
 export { commandCp } from './commandCp.js';
 export { commandOs } from './commandOs.js';
 export { commandHash } from './commandHash.js';
+export { commandCompress } from './commandCompress.js';
+export { commandDecompress } from './commandDecompress.js';
