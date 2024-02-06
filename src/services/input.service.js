@@ -12,7 +12,7 @@ import {
 } from '../commands/index.js';
 import { isPathExist, parserInput } from '../helpers/index.js';
 import { printCurrentDir } from '../messages/index.js';
-import { printError } from './log.service.js';
+import { printError, printMessage } from './log.service.js';
 
 const inputConsole = async (data) => {
   const { command, firstArg, secondArg } = await parserInput(data);
@@ -58,6 +58,14 @@ const inputConsole = async (data) => {
       (await isPathExist(firstArg)) &&
         (await isPathExist(secondArg)) &&
         (await commandCp(firstArg, secondArg));
+      break;
+
+    case COMMANDS.MV:
+      if ((await isPathExist(firstArg)) && (await isPathExist(secondArg))) {
+        await commandCp(firstArg, secondArg);
+        commandRm(firstArg);
+        printMessage({ text: 'File has been Moved', colorText: 'green' });
+      }
       break;
 
     default:

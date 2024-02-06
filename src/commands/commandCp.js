@@ -11,4 +11,5 @@ export async function commandCp(pathFrom, pathTo) {
   writableStream.on('error', (error) => printError(`Operation failed! Message: ${error.message}`));
 
   readableStream.pipe(writableStream);
+  printMessage({ text: 'File has been Copied', colorText: 'green' });
 }

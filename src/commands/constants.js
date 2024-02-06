@@ -9,4 +9,5 @@ export const COMMANDS = {
   RN: 'rn',
   RM: 'rm',
   CP: 'cp',
+  MV: 'mv',
 };
