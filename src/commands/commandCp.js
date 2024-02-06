@@ -1,6 +1,6 @@
 import { createReadStream, createWriteStream } from 'fs';
 import { basename, join } from 'path';
-import { printError } from '../services/log.service.js';
+import { printError, printMessage } from '../services/log.service.js';
 
 export async function commandCp(pathFrom, pathTo) {
   try {
