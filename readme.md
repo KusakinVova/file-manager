@@ -95,31 +95,31 @@
 1. Get EOL (default system End-Of-Line).
 
    ```bash
-   - os --EOL
+   os --EOL
    ```
 
 2. Get host machine CPUs info (overall amount of CPUS plus model and clock rate (in GHz) for each of them).
 
    ```bash
-   - os --cpus
+   os --cpus
    ```
 
 3. Get home directory.
 
    ```bash
-   - os --homedir
+   os --homedir
    ```
 
 4. Get current system user name (Do not confuse with the username that is set when the application starts)
 
    ```bash
-   - os --username
+   os --username
    ```
 
 5. Get CPU architecture for which Node.js binary has compiled
 
    ```bash
-   - os --architecture
+   os --architecture
    ```
 
 ### Hash calculation
